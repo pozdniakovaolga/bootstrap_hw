@@ -12,7 +12,7 @@ class MyServer(BaseHTTPRequestHandler):
     @staticmethod
     def __get_index():
         """ Метод получения данных индексной страницы """
-        with open("index.html") as file:  # открываем файл index.html
+        with open("index.html", "r", encoding='utf8') as file:  # открываем файл index.html
             content = file.read()  # читаем данные из файла
         return content  # возвращаем html-страницу
 
